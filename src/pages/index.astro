@@ -1,16 +1,38 @@
 ---
-
+import Cabecera from "../components/Cabecera.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Click Conversor</title>
+  </head>
+  <body>
+    <Cabecera />
+
+    <main>
+      <Hero />
+    </main>
+  </body>
 </html>
+<style is:global>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1e1d26;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  header,
+  section {
+    background: #020202;
+  }
+  main {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+  }
+</style>
